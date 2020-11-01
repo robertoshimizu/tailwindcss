@@ -1,8 +1,11 @@
 <h1 align="center">
-	<img
+	<a 
+    href="https://tailwindcss.com/">
+    <img
 		width="400"
 		alt="Tailwind logo"
 		src="https://miro.medium.com/max/700/0*nGTqAcuGJb118YAO.png">
+    </a>        
 </h1>
 
 # Experimenting Tailwind CSS
