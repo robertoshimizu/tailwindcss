@@ -66,6 +66,8 @@ In the public folder, create a new `index.html` file. Scaffold a html template. 
 ```
 Spin a *``Live Server``* and check it out!
 
+Note that from branch-4 onwards, the project was converted to Vue, therefore the structure changed and the above instructions does not apply anymore.
+
 ## Tools to streamline Tailwind code in VS Code
 
 - [Sizzy](https://adamwathan.me/sizzy) for the browser preview on the right-hand size.
