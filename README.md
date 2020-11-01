@@ -67,9 +67,42 @@ In the public folder, create a new `index.html` file. Scaffold a html template. 
 Spin a *``Live Server``* and check it out!
 
 Note that from branch-4 onwards, the project was converted to Vue, therefore the structure changed and the above instructions does not apply anymore.
+To create a Vue project, use Vue CLI.
+```sh
+# install vue CLI
+yarn global add @vue/cli
+# create a Vue project in the current directory
+vue create .
+```
+Make the necessary changes in Vue files and update paths in the scripts in package.json.
 
 ## Tools to streamline Tailwind code in VS Code
 
 - [Sizzy](https://adamwathan.me/sizzy) for the browser preview on the right-hand size.
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to spin a webserver and render your html files live. Alternative and easier than ``Sizzy``.
 - [Tailwind CSS Intellisense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) for intelligent auto-completion.
+
+## Optimize for production
+
+Use [Purgecss](https://purgecss.com/) to remove unused classes from production builds. In fact, you don't need to carry the full css file into production, it makes sense to carry only those classes that you actually are using for your project. That reduces significantly the size of the build files.
+```sh
+yarn add @fullhuman/postcss-purgecss
+```
+Modify the `postcss.config.js` to run purgecss only when your deploy it to production.
+```javascript
+module.exports = {
+    plugins:[
+        require('tailwindcss'),
+        require('autoprefixer'),
+        process.env.NODE_ENV === 'production' && require('@fullhuman/postcss-purgecss')({
+            content:[
+                './src/**/*.vue',
+                './public/index.html',
+            ],
+            defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+        })
+    ]
+}
+```
+### References:
+- [Designing with Tailwind CSS](https://tailwindcss.com/course): [GETTING UP AND RUNNING](https://tailwindcss.com/course/setting-up-tailwind-and-postcss)
