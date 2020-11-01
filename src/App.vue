@@ -3,7 +3,7 @@
     <div class="bg-gray-100 flex">
       <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
         <div class="xl:max-w-lg xl:ml-auto">
-          <img class="h-10" src="/img/logo.svg" alt="Workcation">
+          <img class="h-10" src="/img/logo-blue.svg" alt="Workcation">
           <img class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden" src="/img/beach-work.jpg" alt="Woman workcationing on the beach">
           <h1 class="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
             You can work from anywhere.
@@ -26,7 +26,7 @@
         <h2 class="text-xl text-gray-900">Popular destinations</h2>
         <p class="text-gray-600">A selection of great work-friendly cities with lots to see and explore.</p>
         <div class="flex flex-wrap -mx-4">
-          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="destination in popularDestinations">
+          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="destination in popularDestinations" :key="destination.id">
             <DestinationCard :destination="destination"/>
           </div>
         </div>
@@ -47,6 +47,7 @@ export default {
     return {
       popularDestinations: [
         {
+          id:1,
           city: 'Toronto',
           averagePrice: 120,
           propertyCount: 76,
@@ -54,6 +55,7 @@ export default {
           imageAlt: 'Toronto skyline',
         },
         {
+          id:2,
           city: 'Malibu',
           averagePrice: 215,
           propertyCount: 43,
@@ -61,6 +63,7 @@ export default {
           imageAlt: 'Cliff in Malibu',
         },
         {
+          id:3,
           city: 'Chicago',
           averagePrice: 130,
           propertyCount: 115,
@@ -68,6 +71,7 @@ export default {
           imageAlt: 'Chicago skyline',
         },
         {
+          id:4,
           city: 'Seattle',
           averagePrice: 135,
           propertyCount: 63,
@@ -75,6 +79,7 @@ export default {
           imageAlt: 'Seattle skyline',
         },
         {
+          id:5,
           city: 'Colorado',
           averagePrice: 85,
           propertyCount: 47,
@@ -82,6 +87,7 @@ export default {
           imageAlt: 'Lake in Colorado',
         },
         {
+          id:6,
           city: 'Miami',
           averagePrice: 115,
           propertyCount: 86,
