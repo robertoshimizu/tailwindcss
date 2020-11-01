@@ -5,6 +5,11 @@
   "main": "index.js",
   "author": "Roberto Shimizu",
   "license": "MIT",
+  "scripts": {
+    "build-tailwind": "postcss css/tailwind.css -o public/build/tailwind.css",
+    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch"
+
+  },
   "dependencies": {
     "autoprefixer": "^9.8.6",
     "postcss-cli": "^8.2.0",
