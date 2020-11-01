@@ -10,8 +10,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-tailwind": "postcss assets/tailwind.css -o public/build/tailwind.css",
-    "watch": "postcss assets/tailwind.css -o public/build/tailwind.css --watch"
+    "build-tailwind": "postcss src/assets/tailwind.css -o public/build/tailwind.css",
+    "watch": "postcss src/assets/tailwind.css -o public/build/tailwind.css --watch"
   },
   "main": "index.js",
   "dependencies": {
