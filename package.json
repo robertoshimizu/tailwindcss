@@ -1,18 +1,55 @@
 {
   "name": "tailwindcss",
   "version": "1.0.0",
+  "private": true,
   "description": "Experiencing and learning Tailwindcss",
-  "main": "index.js",
-  "author": "Roberto Shimizu",
-  "license": "MIT",
-  "scripts": {
-    "build-tailwind": "postcss css/tailwind.css -o public/build/tailwind.css",
-    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch"
-
+  "author": {
+    "name": "Roberto Shimizu"
   },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-tailwind": "postcss assets/tailwind.css -o public/build/tailwind.css",
+    "watch": "postcss assets/tailwind.css -o public/build/tailwind.css --watch"
+  },
+  "main": "index.js",
   "dependencies": {
     "autoprefixer": "^9.8.6",
+    "core-js": "^3.6.5",
     "postcss-cli": "^8.2.0",
-    "tailwindcss": "^1.9.6"
-  }
+    "tailwindcss": "^1.9.6",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "_id": "tailwindcss@1.0.0",
+  "license": "MIT",
+  "readme": "ERROR: No README data found!"
 }
