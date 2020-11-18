@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="antialiased text-gray-900">
     <div class="bg-gray-100 flex">
       <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
         <div class="xl:max-w-lg xl:ml-auto">
@@ -26,7 +26,7 @@
         <h2 class="text-xl text-gray-900">Popular destinations</h2>
         <p class="text-gray-600">A selection of great work-friendly cities with lots to see and explore.</p>
         <div class="flex flex-wrap -mx-4">
-          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="destination in popularDestinations" :key="destination.id">
+          <div class="mt-6 px-4 w-full lg:w-1/2 xl:w-1/3 " v-for="destination in popularDestinations" :key="destination.id">
             <DestinationCard :destination="destination"/>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default {
         imageAlt:'Rear view of modern home with pool',
         beds:3,
         baths:2,
-        title:'Modern home in city center',
+        title:'Modern executive home in the heart of historic Los Angeles',
         priceInCents: 190000,
         formattedPrice:'$1,900.00',
         reviewCount:34,
