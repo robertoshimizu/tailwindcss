@@ -1,5 +1,5 @@
 <template>
-<div class='bg-white p-2 border rounded-lg overflow-hidden'>
+<div class='bg-white p-2 shadow-xl rounded-lg overflow-hidden'>
     <img class='rounded-lg' :src="property.imageUrl" alt="property.imageAlt">
     <div class='p-6'>
         <div class="flex items-baseline">
