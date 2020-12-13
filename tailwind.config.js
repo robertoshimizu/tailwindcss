@@ -1,21 +1,15 @@
+// tailwind.config.js
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [],
   theme: {
     extend: {
-      colors:{
-        'brand-blue':'#1992d4',
+      colors: {
+        'light-blue': colors.lightBlue,
+        cyan: colors.cyan,
       },
-      spacing:{
-        '72':'18rem',
-      }
     },
   },
-  variants: {
-    backgroundColor:['responsive', 'hover', 'focus', 'active']
-  },
+  variants: {},
   plugins: [],
 }
