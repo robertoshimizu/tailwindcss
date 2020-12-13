@@ -6,7 +6,7 @@
     <div class="relative px-4 -mt-16">
         <div class='bg-white p-6 rounded-lg shadow-lg'>
             <div class="flex items-baseline">
-                <span class="inline-block bg-teal-200 text-teal-800 px-2 rounded-full text-xs uppercase font-semibold tracking-wide">New</span>
+                <span class="inline-block bg-cyan-300 text-teal-800 px-2 rounded-full text-xs uppercase font-semibold tracking-wide">New</span>
                 <div class="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
                 {{ property.beds }} beds &bull; {{ property.baths }} baths
                 </div>
