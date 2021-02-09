@@ -10,6 +10,13 @@
 
 # Experimenting Tailwind CSS
 
+## Tailwind is a PostCSS Plugin
+
+PostCSS is a tool for transforming CSS with JavaScript plugins. It provides features via its extensive plugin ecosystem to help improve your CSS writing experience. You can pick the plugins you need or even write a custom one for yourself. Tailwindcss and autoprefixer are PostCSS plugins, and they should be added to your POstCSS configuration. Check them in your `postcss.config.js` file.
+This is a reason why postcss-cli and autoprefixer are installed together with tailwindcss. Check them in the `package.json` file.
+
+Together with autoprefixer, the build will replace all css custom markers with tailwindcss generated code, which are all tailwindcss base styles, components and utility classes. Check the file  `public/build/taiwind.css` as a result of `build-tailwind` script in `package.json`. You should check for that in your Starter project. Now it is just link the stylesheet in the `index.html` and voilá! Below you find a complete setup workflow.
+
 ## Setup
 
 - **Create a project folder** Move inside the project folder and initiate the project using npm or yarn.
@@ -65,6 +72,8 @@ In the public folder, create a new `index.html` file. Scaffold a html template. 
 </html>
 ```
 Spin a *``Live Server``* and check it out!
+
+## Integrating with Vuejs
 
 Note that from branch-4 onwards, the project was converted to Vue, therefore the structure changed and the above instructions does not apply anymore.
 To create a Vue project, use Vue CLI.
