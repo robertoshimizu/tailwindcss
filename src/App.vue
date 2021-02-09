@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="antialiased text-gray-900">
     <div class="bg-gray-100 flex">
       <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
         <div class="xl:max-w-lg xl:ml-auto">
@@ -13,7 +13,7 @@
             Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
           </p>
           <div class="mt-4 sm:mt-6">
-            <a href="#" class="btn bg-brand-blue text-white shadow-lg sm:text-base">Book your escape</a>
+            <a href="#" class="btn bg-light-blue-900 text-white shadow-lg sm:text-base">Book your escape</a>
           </div>
         </div>
       </div>
@@ -26,22 +26,27 @@
         <h2 class="text-xl text-gray-900">Popular destinations</h2>
         <p class="text-gray-600">A selection of great work-friendly cities with lots to see and explore.</p>
         <div class="flex flex-wrap -mx-4">
-          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="destination in popularDestinations" :key="destination.id">
+          <div class="mt-6 px-4 w-full lg:w-1/2 xl:w-1/3 " v-for="destination in popularDestinations" :key="destination.id">
             <DestinationCard :destination="destination"/>
           </div>
         </div>
       </div>
     </div>
+    <div class="bg-gray-200 min-h-screen p-8 flex items-center justify-center">
+      <PropertyCard :property="property"/>
+    </div>    
   </div>
 </template>
 
 <script>
 import DestinationCard from './components/DestinationCard'
+import PropertyCard from './components/PropertyCard'
 
 export default {
   name: 'app',
   components: {
     DestinationCard,
+    PropertyCard,
   },
   data() {
     return {
@@ -94,7 +99,18 @@ export default {
           imageUrl: '/img/miami.jpg',
           imageAlt: 'Beach in Miami',
         },
-      ]
+      ],
+      property:{
+        imageUrl:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        imageAlt:'Rear view of modern home with pool',
+        beds:3,
+        baths:2,
+        title:'Modern executive home in the heart of historic Los Angeles',
+        priceInCents: 190000,
+        formattedPrice:'$1,900.00',
+        reviewCount:34,
+        rating:4,
+      }
     }
   }
 }
