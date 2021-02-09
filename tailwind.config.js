@@ -6,10 +6,13 @@ module.exports = {
     extend: {
       colors: {
         'light-blue': colors.lightBlue,
-        cyan: colors.cyan,
+        'cyan' : colors.cyan,
+        'brand-blue': '#1992d4',
       },
     },
   },
-  variants: {},
+  variants: {
+    backgroundColor:['responsive', 'hover', 'focus', 'active']
+  },
   plugins: [],
 }

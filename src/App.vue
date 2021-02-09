@@ -8,13 +8,14 @@
           <img class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-72 sm:w-full sm:object-cover sm:object-center lg:hidden" src="/img/beach-work.jpg" alt="Woman workcationing on the beach">
           <h1 class="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
             You can work from anywhere.
-            <br class="hidden lg:inline"><span class="text-indigo-500">Take advantage of it.</span>
+            <br class="hidden lg:inline"><span class="text-brand-blue">Take advantage of it.</span>
           </h1>
           <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
             Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
           </p>
           <div class="mt-4 sm:mt-6">
-            <a href="#" class="inline-block px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 focus:outline-none text-sm text-white uppercase tracking-wider font-semibold">Book your escape</a>
+            <!-- Note that we created a custom component "btn", see ./assets/tailwind.css -->
+            <a href="#" class="btn bg-brand-blue text-white">Book your escape</a>
           </div>
         </div>
       </div>
