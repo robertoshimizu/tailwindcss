@@ -84,6 +84,11 @@ yarn global add @vue/cli
 vue create .
 ```
 Make the necessary changes in Vue files and update paths in the scripts in package.json.
+At bottom of `App.vue` insert:
+```
+<style src="./assets/tailwind.css"></style>
+```
+
 
 ## Tools to streamline Tailwind code in VS Code
 
