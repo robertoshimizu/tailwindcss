@@ -1,4 +1,5 @@
 <template>
+  <!-- At the root level you can add some deafults like the text-gray color, and use the "antialiased" to improve performance -->
   <div id="app" class="antialiased text-gray-900">
     <div class="bg-gray-100 flex">
       <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">

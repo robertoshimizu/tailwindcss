@@ -88,7 +88,12 @@ At bottom of `App.vue` insert:
 ```
 <style src="./assets/tailwind.css"></style>
 ```
+## Customization
 
+1 - Make your own [reusable component](https://www.youtube.com/watch?v=krSgBUmIgP0&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=5), e.g. buttons, etc.
+    Check the `./assets/tailwind.css` and see how `.btn` is defined using `@apply`. Then it is just a matter to use this class.
+
+2 - [Customize your design system](https://www.youtube.com/watch?v=wtW6LodXkls&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=7), for example add a new color or defining a new spacing. Check `tailwind.config.js` and see how it is done. Remember to use `extend` to merge, otherwise it overrides.
 
 ## Tools to streamline Tailwind code in VS Code
 
@@ -96,7 +101,7 @@ At bottom of `App.vue` insert:
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to spin a webserver and render your html files live. Alternative and easier than ``Sizzy``.
 - [Tailwind CSS Intellisense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) for intelligent auto-completion.
 
-## Optimize for production
+## PurgeCSS - optimizing for production
 
 Use [Purgecss](https://purgecss.com/) to remove unused classes from production builds. In fact, you don't need to carry the full css file into production, it makes sense to carry only those classes that you actually are using for your project. That reduces significantly the size of the build files.
 ```sh
